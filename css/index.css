@@ -8,9 +8,9 @@ header{
 	height: 70px;
 	border-bottom: 1px solid #ddd;
 	text-align: center;
-	user-select:none; 
+	user-select:none;   
 } 
-header span{
+header span{ 
 	/*line-height: 70px;*/
 	font: 25px/70px "微软雅黑";
 	cursor: default;
@@ -28,5 +28,36 @@ header .me_btn:hover{
 	color: #4876FF;
 }
 .title_list{
-
+	/*background-color: #eee;*/
+	position: absolute;
+	top: 70px;bottom: 0px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.title_list ul{
+	margin: 0 auto;padding: 0;
+	/*background-color: red;*/
+	position: relative;
+	width: 500px;
+	/*overflow-x: hidden;*/
+}
+.title_list ul li{
+	/*background-color: #bbb;*/
+	margin: 0;
+	list-style: none;
+	font: 22px/70px "微软雅黑";
+	width: 500px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.title_list ul li a{
+	width: 500px;
+	text-decoration: none;
+	color: #333;
+	cursor: default;
+}
+.title_list ul li a:hover{
+	color: #4876FF; 
 }
