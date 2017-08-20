@@ -1,11 +1,11 @@
 $(document).ready(function(){
-	openProg();
-	setTimeout(function(){
-		closeProg();
-	},1550);
+	// openProg();
+	// setTimeout(function(){
+	// 	closeProg();
+	// },9550); 
 	loadList(addTitlelistEvent);
 });
-
+ 
 // 进度条
 function openProg() {
 	var progElem = $(".out_prog");
@@ -43,7 +43,7 @@ function addTitlelistEvent(){
 		openProg();
 		setTimeout(function(){
 			closeProg();
-		},2000);
+		},1500);
 		url = 'https://zhangkaien.github.io/text/' +　$(this).attr('href');
 		var htmlobj=$.ajax({
 			url:url,
@@ -53,7 +53,7 @@ function addTitlelistEvent(){
 		$(".title_list .passage").html(htmlobj.responseText);
 		$(".title_list ul").css('display','none');
 		$(".title_list pre").css('display','block');
-		closeProg();
+		// closeProg();
 		return false;
 	});
 	$(".list_btn").click(function(){
