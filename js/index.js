@@ -1,8 +1,4 @@
-$(document).ready(function(){
-	// openProg();
-	// setTimeout(function(){
-	// 	closeProg();
-	// },9550); 
+$(document).ready(function(){ 
 	loadList(addTitlelistEvent);
 });
  
