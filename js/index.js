@@ -10,7 +10,7 @@ $(document).ready(function(){
 function openProg() {
 	var progElem = $(".out_prog");
 	progElem.css("display","block");
-	$(".in_prog").animate({"width":"90%"},500);
+	$(".in_prog").animate({"width":"90%"},300);
 }
 function closeProg() {
 	var progElem = $(".out_prog");
