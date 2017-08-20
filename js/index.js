@@ -21,7 +21,7 @@ function closeProg() {
 // 加载标题列表
 function loadList(fun){
 	var htmlobj=$.ajax({
-		url:"/title.txt",
+		url:"https://zhangkaien.github.io/title.txt",
 		async:false,
 		contentType: "application/x-www-form-urlencoded; charset=utf-8" 
 	});
@@ -44,7 +44,7 @@ function addTitlelistEvent(){
 		setTimeout(function(){
 			closeProg();
 		},2000);
-		url = '/text/' +　$(this).attr('href');
+		url = 'https://zhangkaien.github.io/text/' +　$(this).attr('href');
 		var htmlobj=$.ajax({
 			url:url,
 			async:false,
