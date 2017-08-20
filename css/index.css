@@ -3,6 +3,9 @@ html,body{
 	margin: 0;padding: 0;
 	/*background-color: #eee;*/
 }
+body{
+	overflow-x: hidden;
+}
 header{
 	/*background-color: blue;*/
 	height: 70px;
@@ -10,30 +13,72 @@ header{
 	text-align: center;
 	user-select:none;   
 } 
+.list_btn{
+	position: absolute;
+	top: 0;left: 0;
+	width: 70px;height: 69px;
+	font: 22px/70px "楷体";
+	text-align: center;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	transition: 0.4s;
+	z-index: 10;
+	font-weight: bold;
+}
+.list_btn:hover{
+	color: #4876FF; 
+	border: 1px solid #63B8FF;
+	/*border-bottom: 1px solid #63B8FF;*/
+	border-radius: 35px;
+}
 header span{ 
 	/*line-height: 70px;*/
-	font: 25px/70px "微软雅黑";
+	font: 25px/70px "楷体";
 	cursor: default;
+	color: #000;
 }
 header .me_btn{
 	display: block;
 	position: absolute;
-	width: 70px;height: 70px;
+	width: 70px;height: 69px;
 	right: 0;top: 0;
 	font: 35px/70px "微软雅黑";
-	border-left: 1px solid #ddd;
+	border: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 	cursor: pointer;
+	transition: 0.4s;
+	z-index: 10;
 }
 header .me_btn:hover{
 	color: #4876FF; 
+	border: 1px solid #63B8FF;
+	/*border-bottom: 1px solid #63B8FF;*/
+	border-radius: 35px; 
+}
+header .intro{
+	position: absolute; 
+	width: 150px;height: 70px;
+	/*background-color: #ccc;*/
+	top: -70px;right: 100px;
+	transition: 0.3s;
+	z-index: 5;
+}
+header .intro li{
+	list-style: none;
+	width: 100%;height: 23px;
+	/*background-color: red;*/
+	font: 16px/30px "楷体";
+	color: #1C86EE;
+}
+header .me_btn:hover + .intro{
+	top: 0;
 }
 .title_list{
 	/*background-color: #eee;*/
 	position: absolute;
-	top: 70px;bottom: 0px;
+	top: 70px;bottom: 0px;right: 0;
 	width: 100%;
 	overflow-y: auto;
-	overflow-x: hidden;
 }
 .title_list ul{
 	margin: 0 auto;padding: 0;
@@ -41,23 +86,78 @@ header .me_btn:hover{
 	position: relative;
 	width: 500px;
 	/*overflow-x: hidden;*/
+	padding: 50px 0 50px 0;
 }
 .title_list ul li{
 	/*background-color: #bbb;*/
-	margin: 0;
+	margin: 20px 0 40px 0;
+	/*font: 52px/70px "微软雅黑";*/
 	list-style: none;
-	font: 22px/70px "微软雅黑";
-	width: 500px;
+	width: 500px;height: 70px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
 .title_list ul li a{
-	width: 500px;
+	width: 500px; 
 	text-decoration: none;
 	color: #333;
 	cursor: default;
+	font: 32px/70px "微软雅黑";
+	transition: 0.3s;
 }
 .title_list ul li a:hover{
 	color: #4876FF; 
 }
+.out_prog{
+	position: absolute;
+	width: 100%;height: 2px;
+	top: 0;left: 0;
+	z-index: 10;
+	display: none;
+}
+.in_prog{
+	position: absolute;
+	top: 0;left: 0;
+	width:0;height: 2px;
+	background-color: #63B8FF;
+	box-shadow: 0 0px 6px #63B8FF;
+}
+
+.title_list .passage{
+	position: absolute;
+	width: 600px;
+	top: 0;left: 50%;
+	margin-left: -300px;
+	/*background-color: #ccc;*/
+	font: 28px/38px "微软雅黑";
+	color: #555;
+	padding: 20px 15px 30px 15px; 
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	display: none;
+}
+
+/*滚动条*/
+::-webkit-scrollbar  
+{  
+    width: 8px;  
+    height: 8px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);  
+    /*border-radius: 10px;  */
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    /*border-radius: 10px;  */
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #404040;  
+}  
