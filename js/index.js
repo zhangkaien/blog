@@ -21,7 +21,7 @@ function closeProg() {
 // 加载标题列表
 function loadList(fun){
 	var htmlobj=$.ajax({
-		url:"https://zhangkaien.github.io/title.txt",
+		url:"https://zhangkaien.github.io/blog/title.txt",
 		async:false,
 		contentType: "application/x-www-form-urlencoded; charset=utf-8" 
 	});
